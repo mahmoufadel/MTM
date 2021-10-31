@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentMediator" Version="0.4.7" />
+    <PackageReference Include="FluentMediator.Microsoft.Extensions.DependencyInjection" Version="0.4.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MTM.Application\MTM.Application.csproj" />
+    <ProjectReference Include="..\MTM.Domain\MTM.Domain.csproj" />
+    <ProjectReference Include="..\MTM.Identity\MTM.Identity.csproj" />
+    <ProjectReference Include="..\MTM.Infra\MTM.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
