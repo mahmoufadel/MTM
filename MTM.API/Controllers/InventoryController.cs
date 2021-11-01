@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MTM.Application;
+using MTM.Application.Services.Inventory.Dto;
 using MTM.Domain.Model;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace MTM.API.Controllers
 
 		[HttpGet]
 		[ActionName("GetAll")]
-		public async Task<List<Inventory>> GetAll()
+		public async Task<List<InventoryDto>> GetAll()
 		{
 			return await _inventoryService.GetAll();
 			
@@ -41,5 +42,7 @@ namespace MTM.API.Controllers
 		{
 			await _inventoryService.BulkInsertAsync(inventories);
 		}
+
+
 	}
 }

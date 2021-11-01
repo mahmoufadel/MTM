@@ -18,7 +18,11 @@ namespace MTM.Infra.Repositories
 		}
 		public async Task<List<Inventory>> GetAll()
 		{
-			var res = await this.Query().ToListAsync();
+			var q = this.Query();
+			/*if (string.IsNullOrEmpty(inventory.Summary))
+				q.Where(i => i.Summary == inventory.Summary);*/
+
+			var res = await q.ToListAsync();
 			return res;
 		}
 
@@ -35,12 +39,11 @@ context.Truncate<Entity>();                       context.TruncateAsync<Entity>(
 
 		  */
 			await this._context.BulkInsertAsync(inventories);
-			
+
 		}
+		
 
 	}
-
-
 
 }
 

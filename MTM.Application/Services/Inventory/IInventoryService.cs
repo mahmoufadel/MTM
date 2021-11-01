@@ -11,7 +11,7 @@ namespace MTM.Application
 		Task Create(Inventory inventoryDto);
 
 		InventoryDto Get(Guid Id);
-		Task<List<Inventory>> GetAll();
+		Task<List<InventoryDto>> GetAll();
 
 		Task BulkInsertAsync(List<Inventory> inventories);
 	}

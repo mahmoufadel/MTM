@@ -35,6 +35,7 @@ using Microsoft.Extensions.Configuration;
 using MTM.Infra.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MTM.Domain.Inventories;
+using AutoMapper;
 
 namespace MTM.API
 {
@@ -98,6 +99,12 @@ namespace MTM.API
 
 
 
+			var mapperConfig = new MapperConfiguration(mc =>
+			{
+				mc.AddProfile(new MappingProfile());
+			});
+			IMapper mapper = mapperConfig.CreateMapper();
+			services.AddSingleton(mapper);
 
 
 			services.AddControllers();

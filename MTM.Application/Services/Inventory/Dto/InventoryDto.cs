@@ -9,7 +9,7 @@ namespace MTM.Application.Services.Inventory.Dto
 {
 	public class InventoryDto
 	{
-		public InventoryId Id { get; set; }
+		public Guid Id { get; set; }
 
 		public string Summary { get; set; }
 

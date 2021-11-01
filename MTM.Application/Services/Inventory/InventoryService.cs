@@ -15,9 +15,11 @@ namespace MTM.Application
 	{
 		IInventoryRepository _repository;
 		private readonly IMediator _mediator;
-		public InventoryService(IInventoryRepository repository, IMediator mediator) {
+		private readonly IMapper _mapper;
+		public InventoryService(IInventoryRepository repository, IMediator mediator, IMapper mapper) {
 			_repository = repository;
 			_mediator = mediator;
+			_mapper = mapper;
 		}
 
 
@@ -33,10 +35,11 @@ namespace MTM.Application
 			throw new NotImplementedException();
 		}
 
-		public async Task<List<Inventory>> GetAll()
+		public async Task<List<InventoryDto>> GetAll()
 		{
 			var res =await  _repository.GetAll();
-			return res;
+			
+			return _mapper.Map<List<InventoryDto>>(res); 
 		}
 
 		public async Task BulkInsertAsync(List<Inventory> inventories)
