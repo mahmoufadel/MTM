@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace MTM.API.Controllers
 {
 	[ApiController]	
-	[Authorize]
+	
 	[Route("api/[controller]/[action]")]
 	public class InventoryController : ControllerBase
 	{
@@ -38,11 +38,12 @@ namespace MTM.API.Controllers
 
 		[HttpPost]
 		[ActionName("BulkInsertAsync")]
-		public async Task BulkInsertAsync(List<Inventory> inventories)
+		public async Task BulkInsertAsync(List<InventoryDto> inventories)
 		{
 			await _inventoryService.BulkInsertAsync(inventories);
 		}
 
+		
 
 	}
 }

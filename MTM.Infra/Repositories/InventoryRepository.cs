@@ -43,7 +43,7 @@ context.Truncate<Entity>();                       context.TruncateAsync<Entity>(
 		}
 		
 
-	}
+		}
 
 }
 

@@ -39,7 +39,7 @@ namespace MTM.Application.Services.Transactions
 			
 		}
 
-		public InventoryDto Get(Guid Id)
+		public AssetDto Get(Guid Id)
 		{
 			throw new NotImplementedException();
 		}

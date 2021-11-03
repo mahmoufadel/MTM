@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MTM.Cache.Redis\MTM.Cache.Redis.csproj" />
     <ProjectReference Include="..\MTM.Domain\MTM.Domain.csproj" />
   </ItemGroup>
 

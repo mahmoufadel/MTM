@@ -12,8 +12,10 @@ namespace MTM.Domain
         IQueryable<TEntity> FindAll();
         IQueryable<TEntity> Query();
 
-        Task Create(TEntity entity);
+      
 
+        Task Create(TEntity entity);
+        void Update(TEntity entityToUpdate);
     }
 
    

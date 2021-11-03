@@ -11,5 +11,7 @@ namespace MTM.Domain
 	{
 		Task<List<Inventory>> GetAll();
 		Task BulkInsertAsync(List<Inventory> inventories);
+
+		
 	}
 }

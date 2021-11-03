@@ -10,7 +10,7 @@ namespace MTM.Application.Services.Transactions
 	{
 		void Create(InventoryTrans inventoryTrans);
 		Task CreateTrans(Domain.Model.Inventory inventory);
-		InventoryDto Get(Guid Id);
+		AssetDto Get(Guid Id);
 		Task<List<InventoryTrans>> GetAll();
 	}
 }

@@ -13,6 +13,8 @@ namespace MTM.Application
 		InventoryDto Get(Guid Id);
 		Task<List<InventoryDto>> GetAll();
 
-		Task BulkInsertAsync(List<Inventory> inventories);
+		Task BulkInsertAsync(List<InventoryDto> inventories);
+
+		
 	}
 }

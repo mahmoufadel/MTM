@@ -1,6 +1,7 @@
 ﻿
 using System;
 using Microsoft.EntityFrameworkCore;
+using MTM.Domain;
 using MTM.Domain.Model;
 
 namespace MTM.Infra
@@ -18,6 +19,9 @@ namespace MTM.Infra
         }
         public DbSet<Inventory> Inventory { get; set; }
         public DbSet<InventoryTrans> InventoryTrans { get; set; }
+        public DbSet<Asset> Assets { get; set; }
+
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Inventory>().HasData(new Inventory()

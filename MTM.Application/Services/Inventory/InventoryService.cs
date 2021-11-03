@@ -42,13 +42,11 @@ namespace MTM.Application
 			return _mapper.Map<List<InventoryDto>>(res); 
 		}
 
-		public async Task BulkInsertAsync(List<Inventory> inventories)
+		public async Task BulkInsertAsync(List<InventoryDto> inventories)
 		{
-			await _repository.BulkInsertAsync(inventories);
+			await _repository.BulkInsertAsync(_mapper.Map<List<Inventory>>(inventories));
 			
 		}
 		
-
-
 	}
 }
