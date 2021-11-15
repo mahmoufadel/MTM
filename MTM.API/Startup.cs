@@ -137,7 +137,7 @@ namespace MTM.API
 			IMapper mapper = mapperConfig.CreateMapper();
 			services.AddSingleton(mapper);
 
-
+			services.AddApplicationInsightsTelemetry();
 			services.AddControllers();
 			services.AddSwaggerGen(c =>
 			{
